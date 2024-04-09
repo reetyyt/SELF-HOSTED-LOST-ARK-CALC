@@ -1,0 +1,3 @@
+#e_blue,#f_blue,#for_blue,#for_blue_herb,#h_blue,#l_blue{
+    background-color: lightgray;
+}

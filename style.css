@@ -1,0 +1,39 @@
+.base{
+    border: 2px solid white;
+    padding: 8px;
+    padding-right: 6px;
+    margin: 4px;
+    width: 240px;
+}
+
+.skillType{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(29, 29, 29);
+    color: white;
+}
+
+#e_grey,#f_grey,#for_grey,#for_grey_herb,#h_grey,#l_grey{
+    background-color: lightgray;
+}
+#e_green,#f_green,#f_green_2,#for_green,#for_green_herb,#h_green,#h_green_2,#l_green{
+    background-color: rgb(7, 180, 7);
+}
+#e_blue,#f_blue,#for_blue,#for_blue_herb,#h_blue,#l_blue{
+    background-color: rgb(0, 102, 255);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
+    appearance: textfield; /* Standard */
+}

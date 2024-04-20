@@ -23,10 +23,10 @@
 // const for_green = document.getElementById("for_green_herb").value
 // const for_blue = document.getElementById("for_blue_herb").value
 //mining
-var mine_grey = document.getElementById("m_grey").value;
-var mine_green = document.getElementById("m_green").value;
-var mine_blue = document.getElementById("m_blue").value; //misc
-
+// const mine_grey = document.getElementById("m_grey").value
+// const mine_green = document.getElementById("m_green").value
+// const mine_blue = document.getElementById("m_blue").value
+//misc
 var oreha_raw_gold = 288; //per one craft
 
 var stim_raw_gold = 28;
@@ -227,44 +227,48 @@ function steakCalc() {
   document.getElementById("steak_10_profit").innerHTML = Math.round(steak_10_profit, 0);
   document.getElementById("steak_20_profit").innerHTML = Math.round(steak_20_profit, 0);
   document.getElementById("steak_30_profit").innerHTML = Math.round(steak_30_profit, 0);
-} // Update on input value change
+}
 
+function inputUpdate() {
+  // Update on input value change
+  atroCalc();
+  document.getElementById('for_blue_herb').addEventListener('input', atroCalc);
+  document.getElementById('m_blue').addEventListener('input', atroCalc);
+  document.getElementById('for_green_herb').addEventListener('input', atroCalc);
+  document.getElementById('e_green').addEventListener('input', atroCalc);
+  document.getElementById('for_grey_herb').addEventListener('input', atroCalc);
+  document.getElementById('atro').addEventListener('input', atroCalc);
+  orehaCalc();
+  document.getElementById('e_grey').addEventListener('input', orehaCalc);
+  document.getElementById('e_green').addEventListener('input', orehaCalc);
+  document.getElementById('e_blue').addEventListener('input', orehaCalc);
+  document.getElementById('red_oreha').addEventListener('input', orehaCalc);
+  orehaCalc_h();
+  document.getElementById('h_grey').addEventListener('input', orehaCalc_h);
+  document.getElementById('h_green').addEventListener('input', orehaCalc_h);
+  document.getElementById('h_blue').addEventListener('input', orehaCalc_h);
+  document.getElementById('red_oreha').addEventListener('input', orehaCalc_h);
+  orehaCalc_f();
+  document.getElementById('f_grey').addEventListener('input', orehaCalc_f);
+  document.getElementById('f_green').addEventListener('input', orehaCalc_f);
+  document.getElementById('f_green_2').addEventListener('input', orehaCalc_f);
+  document.getElementById('f_blue').addEventListener('input', orehaCalc_f);
+  document.getElementById('red_oreha').addEventListener('input', orehaCalc_f);
+  stimCalc();
+  document.getElementById('for_blue').addEventListener('input', stimCalc);
+  document.getElementById('for_green').addEventListener('input', stimCalc);
+  document.getElementById('l_blue').addEventListener('input', stimCalc);
+  document.getElementById('e_green').addEventListener('input', stimCalc);
+  document.getElementById('for_grey').addEventListener('input', stimCalc);
+  document.getElementById('stim').addEventListener('input', stimCalc);
+  steakCalc();
+  document.getElementById('h_blue').addEventListener('input', steakCalc);
+  document.getElementById('f_blue').addEventListener('input', steakCalc);
+  document.getElementById('h_green').addEventListener('input', steakCalc);
+  document.getElementById('h_green_2').addEventListener('input', steakCalc);
+  document.getElementById('h_grey').addEventListener('input', steakCalc);
+  document.getElementById('f_grey').addEventListener('input', steakCalc);
+  document.getElementById('steak').addEventListener('input', steakCalc);
+}
 
-atroCalc();
-document.getElementById('for_blue_herb').addEventListener('input', atroCalc);
-document.getElementById('m_blue').addEventListener('input', atroCalc);
-document.getElementById('for_green_herb').addEventListener('input', atroCalc);
-document.getElementById('e_green').addEventListener('input', atroCalc);
-document.getElementById('for_grey_herb').addEventListener('input', atroCalc);
-document.getElementById('atro').addEventListener('input', atroCalc);
-orehaCalc();
-document.getElementById('e_grey').addEventListener('input', orehaCalc);
-document.getElementById('e_green').addEventListener('input', orehaCalc);
-document.getElementById('e_blue').addEventListener('input', orehaCalc);
-document.getElementById('red_oreha').addEventListener('input', orehaCalc);
-orehaCalc_h();
-document.getElementById('h_grey').addEventListener('input', orehaCalc_h);
-document.getElementById('h_green').addEventListener('input', orehaCalc_h);
-document.getElementById('h_blue').addEventListener('input', orehaCalc_h);
-document.getElementById('red_oreha').addEventListener('input', orehaCalc_h);
-orehaCalc_f();
-document.getElementById('f_grey').addEventListener('input', orehaCalc_f);
-document.getElementById('f_green').addEventListener('input', orehaCalc_f);
-document.getElementById('f_green_2').addEventListener('input', orehaCalc_f);
-document.getElementById('f_blue').addEventListener('input', orehaCalc_f);
-document.getElementById('red_oreha').addEventListener('input', orehaCalc_f);
-stimCalc();
-document.getElementById('for_blue').addEventListener('input', stimCalc);
-document.getElementById('for_green').addEventListener('input', stimCalc);
-document.getElementById('l_blue').addEventListener('input', stimCalc);
-document.getElementById('e_green').addEventListener('input', stimCalc);
-document.getElementById('for_grey').addEventListener('input', stimCalc);
-document.getElementById('stim').addEventListener('input', stimCalc);
-steakCalc();
-document.getElementById('h_blue').addEventListener('input', steakCalc);
-document.getElementById('f_blue').addEventListener('input', steakCalc);
-document.getElementById('h_green').addEventListener('input', steakCalc);
-document.getElementById('h_green_2').addEventListener('input', steakCalc);
-document.getElementById('h_grey').addEventListener('input', steakCalc);
-document.getElementById('f_grey').addEventListener('input', steakCalc);
-document.getElementById('steak').addEventListener('input', steakCalc);
+inputUpdate();

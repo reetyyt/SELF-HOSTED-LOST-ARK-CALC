@@ -28,9 +28,9 @@
 // const for_blue = document.getElementById("for_blue_herb").value
 
 //mining
-const mine_grey = document.getElementById("m_grey").value
-const mine_green = document.getElementById("m_green").value
-const mine_blue = document.getElementById("m_blue").value
+// const mine_grey = document.getElementById("m_grey").value
+// const mine_green = document.getElementById("m_green").value
+// const mine_blue = document.getElementById("m_blue").value
 
 
 
@@ -267,9 +267,8 @@ function steakCalc() {
   document.getElementById("steak_30_profit").innerHTML = Math.round(steak_30_profit, 0);
 }
 
-
-
-// Update on input value change
+function inputUpdate() {
+  // Update on input value change
 atroCalc();
 document.getElementById('for_blue_herb').addEventListener('input', atroCalc);
 document.getElementById('m_blue').addEventListener('input', atroCalc);
@@ -313,3 +312,7 @@ document.getElementById('h_green_2').addEventListener('input', steakCalc);
 document.getElementById('h_grey').addEventListener('input', steakCalc);
 document.getElementById('f_grey').addEventListener('input', steakCalc);
 document.getElementById('steak').addEventListener('input', steakCalc);
+  }
+
+inputUpdate()
+

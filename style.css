@@ -11,20 +11,39 @@
     margin: 0;
 }
 
+.skill-container {
+    flex: 1 1 5%; /* Adjust the width as needed */
+}
+
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(29, 29, 29);
     color: white;
 }
 
-#e_grey,#f_grey,#for_grey,#for_grey_herb,#h_grey,#l_grey{
+/* Apply modern input styles */
+input[type="number"] {
+    border: 0px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Add box shadow on hover and focus */
+  input[type="number"]:hover,
+  input[type="number"]:focus {
+    border-color: #af4c4c;
+    box-shadow: 0 0 155px rgba(175, 76, 76, 0.5);
+  }
+
+#e_grey,#f_grey,#for_grey,#for_grey_herb,#h_grey,#l_grey,#m_grey{
     background-color: lightgray;
 }
-#e_green,#f_green,#f_green_2,#for_green,#for_green_herb,#h_green,#h_green_2,#l_green{
-    background-color: rgb(7, 180, 7);
+#e_green,#f_green,#f_green_2,#for_green,#for_green_herb,#h_green,#h_green_2,#l_green,#m_green{
+    background-color: rgb(7, 207, 7);
 }
-#e_blue,#f_blue,#for_blue,#for_blue_herb,#h_blue,#l_blue{
-    background-color: rgb(0, 102, 255);
+#e_blue,#f_blue,#for_blue,#for_blue_herb,#h_blue,#l_blue,#m_blue{
+    background-color: rgb(0, 153, 255);
 }
 
 input[type=number]::-webkit-inner-spin-button,

@@ -1,57 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-4">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Reet's lost ark calc</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="materials">
-        <div id="excav" class="base">
-            <p class="skillType">Excavation</p>
-            <p>Ancient Relic</p><input type="number" id="e_grey" size="8" title="grey" >
-            <p>Rare Relic</p><input type="number" id="e_green" size="8" title="green">
-            <p>Oreha Relic</p><input type="number" id="e_blue" size="8" title="blue">
-        </div>
-        <div id="fish" class="base">
-            <p class="skillType">Fishing</p>
-            <p>Fish</p><input type="number" id="f_grey" size="8" title="grey">
-            <p>Natural Pearl</p><input type="number" id="f_green" size="8" title="green"> <!-- fish -->
-            <p>Redflesh Fish</p><input type="number" id="f_green_2" size="8" title="green"> <!-- pearl -->
-            <p>Oreha Solar Carp</p><input type="number" id="f_blue" size="8" title="blue">
-        </div>
-        <div id="logging" class="base">
-            <p class="skillType">Logging</p>
-            <p>Timber</p><input type="number" id="l_grey" size="8" title="grey" >
-            <p>Tender Timber</p><input type="number" id="l_green" size="8" title="green">
-            <p>Sturdy Timber</p><input type="number" id="l_blue" size="8" title="blue">
-        </div>
-        <div id="hunt" class="base">
-            <p class="skillType">Hunting</p>
-            <p>Thick Raw Meat</p><input type="number" id="h_grey" size="8" title="grey">
-            <p>Tough Leather</p><input type="number" id="h_green" size="8" title="green"> <!-- leather -->
-            <P>Treated Meat</P><input type="number" id="h_green_2" size="8" title="green"> <!-- meat -->
-            <p>Oreha Thick Meat</p><input type="number" id="h_blue" size="8" title="blue">
-        </div>
-        <div id="forage" class="base">
-            <p class="skillType">Foraging</p>
-            <br>
-            <p class="skillType">Mushrooms</p>
-            <p>Crude Mushroom</p><input type="number" id="for_grey" size="8" title="grey">
-            <p>Fresh Mushroom</p><input type="number" id="for_green" size="8" title="green">
-            <p>Exquisite Mushroom</p><input type="number" id="for_blue" size="8" title="blue">
-            <br>
-            <br>
-            <p class="skillType">Herbs</p>
-            <p>Wild Flower</p><input type="number" id="for_grey_herb" size="8" title="grey">
-            <p>Shy Wild Flower</p><input type="number" id="for_green_herb" size="8" title="green">
-            <p>Bright Wild Flower</p><input type="number" id="for_blue_herb" size="8" title="blue">
-        </div>
-    </div>
-    <div id="items">
+    <div id="materials" class="container d-flex flex-wrap">
+        <!-- <div class="row"> -->
+            <div id="excav" class="skill-container">
+                <p class="skillType">Excavation</p>
+                <p>Ancient Relic</p><input type="number" id="e_grey" size="4"  >
+                <p>Rare Relic</p><input type="number" id="e_green" size="4" >
+                <p>Oreha Relic</p><input type="number" id="e_blue" size="4" >
+            </div>
 
+            <div id="fish" class="skill-container">
+                <p class="skillType">Fishing</p>
+                <p>Fish</p><input type="number" id="f_grey" size="4" >
+                <p>Natural Pearl</p><input type="number" id="f_green" size="4" >
+                <p>Redflesh Fish</p><input type="number" id="f_green_2" size="4" >
+                <p>Oreha Solar Carp</p><input type="number" id="f_blue" size="4" >
+            </div>
+
+            <div id="logging" class="skill-container">
+                <p class="skillType">Logging</p>
+                <p>Timber</p><input type="number" id="l_grey" size="4"  >
+                <p>Tender Timber</p><input type="number" id="l_green" size="4" >
+                <p>Sturdy Timber</p><input type="number" id="l_blue" size="4" >
+            </div>
+
+            <div id="mining" class="skill-container">
+              <p class="skillType">Mining</p>
+              <p>Iron Ore</p><input type="number" id="m_grey" size="4"  >
+              <p>Heavy Iron Ore</p><input type="number" id="m_green" size="4" >
+              <p>Strong Iron Ore</p><input type="number" id="m_blue" size="4" >
+            </div>
+
+            <div id="hunt" class="skill-container">
+                <p class="skillType">Hunting</p>
+                <p>Thick Raw Meat</p><input type="number" id="h_grey" size="4" >
+                <p>Tough Leather</p><input type="number" id="h_green" size="4" >
+                <P>Treated Meat</P><input type="number" id="h_green_2" size="4" >
+                <p>Oreha Thick Meat</p><input type="number" id="h_blue" size="4" >
+            </div>
+
+            <div id="forage_mush" class="skill-container">
+                <p class="skillType">Mushrooms</p>
+                <p>Crude Mushroom</p><input type="number" id="for_grey" size="4" >
+                <p>Fresh Mushroom</p><input type="number" id="for_green" size="4" >
+                <p>Exquisite Mushroom</p><input type="number" id="for_blue" size="4" >
+            </div>
+            
+            <div id="forage_flow" class="skill-container">
+                <p class="skillType">Herbs</p>
+                <p>Wild Flower</p><input type="number" id="for_grey_herb" size="4" >
+                <p>Shy Wild Flower</p><input type="number" id="for_green_herb" size="4" >
+                <p>Bright Wild Flower</p><input type="number" id="for_blue_herb" size="4" >
+            </div>
+        <!-- </div> -->
     </div>
+    <br>
+    <div id="items" class="container">
+        <div class="row gx-2 ">
+      
+          <div class="col-lg-3 col-md-6">
+            <p>Prime Oreha Fusion Material</p><input type="number" id="red_oreha" size="4">
+            <p>Excavation:</p>
+            <p>10/ Cost: <span id="oreha_10_cost"></span> Profit: <span id="oreha_10_profit"></span></p>
+            <p>20/ Cost: <span id="oreha_20_cost"></span> Profit: <span id="oreha_20_profit"></span></p>
+            <p>30/ Cost: <span id="oreha_30_cost"></span> Profit: <span id="oreha_30_profit"></span></p>
+            <p>Fishing:</p>
+            <p>10/ Cost: <span id="oreha_10_cost_f"></span> Profit: <span id="oreha_10_profit_f"></span></p>
+            <p>20/ Cost: <span id="oreha_20_cost_f"></span> Profit: <span id="oreha_20_profit_f"></span></p>
+            <p>30/ Cost: <span id="oreha_30_cost_f"></span> Profit: <span id="oreha_30_profit_f"></span></p>
+            <p>Hunting:</p>
+            <p>10/ Cost: <span id="oreha_10_cost_h"></span> Profit: <span id="oreha_10_profit_h"></span></p>
+            <p>20/ Cost: <span id="oreha_20_cost_h"></span> Profit: <span id="oreha_20_profit_h"></span></p>
+            <p>30/ Cost: <span id="oreha_30_cost_h"></span> Profit: <span id="oreha_30_profit_h"></span></p>
+            
+          </div>
+      
+          <div class="col-lg-3 col-md-6">
+            <p>Stimulant</p><input type="number" id="stim" size="4">
+            <p>10/ Cost: <span id="stim_10_cost"></span> Profit: <span id="stim_10_profit"></span></p>
+            <p>20/ Cost: <span id="stim_20_cost"></span> Profit: <span id="stim_20_profit"></span></p>
+            <p>30/ Cost: <span id="stim_30_cost"></span> Profit: <span id="stim_30_profit"></span></p>
+          </div>
+      
+          <div class="col-lg-3 col-md-6">
+            <p>Atrophine</p><input type="number" id="atro" size="4">
+            <p>10/ Cost: <span id="atro_10_cost"></span> Profit: <span id="atro_10_profit"></span></p>
+            <p>20/ Cost: <span id="atro_20_cost"></span> Profit: <span id="atro_20_profit"></span></p>
+            <p>30/ Cost: <span id="atro_30_cost"></span> Profit: <span id="atro_30_profit"></span></p>
+
+          </div>
+      
+          <div class="col-lg-3 col-md-6">
+            <p>[Masterwork] Master's Herb Steak Meal</p><input type="number" id="steak" size="4">
+            <p>10/ Cost: <span id="steak_10_cost"></span> Profit: <span id="steak_10_profit"></span></p>
+            <p>20/ Cost: <span id="steak_20_cost"></span> Profit: <span id="steak_20_profit"></span></p>
+            <p>30/ Cost: <span id="steak_30_cost"></span> Profit: <span id="steak_30_profit"></span></p>
+
+          </div>
+      
+        </div>
+      </div>
     <script src="script.js"></script>
 </body>
 </html>
